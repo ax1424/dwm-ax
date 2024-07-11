@@ -9,6 +9,7 @@ mpv --no-video ~/Music/startup.mp3 &
 nm-applet & 
 picom --daemon & 
 redshift &
+sxhkd -c ~/.dwm/sxhkd/sxhkdrc &
 volumeicon & 
 xfce4-power-manager &
 
