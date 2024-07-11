@@ -1,0 +1,108 @@
+### The Essentials ###
+
+# librewolf
+super + b
+    librewolf 
+    
+# geany
+super + g
+    geany 
+    
+# launch the dwm config
+super + c
+    geany + ~/.config/dwm/config.def.h
+
+### Utilities ###
+# pcmanfm
+super + shift + f
+    pcmanfm 
+    
+# ranger 
+super + r
+	alacritty -e ranger
+	
+# thunderbird
+super + t
+	thunderbird
+	
+# virt-manager
+super + shift + v
+	virt-manager
+	
+# Show trayer
+super + shift + t
+    trayer --edge top --align center --widthtype request --expand true --SetDockType true 
+    --SetPartialStrut true --transparent true --alpha 0 --tint 0x000000 --height 22 &
+
+# Hide trayer
+super + alt + t
+    pkill trayer
+	
+### Brightness Control ###
+XF86MonBrightnessUp	
+	brightnessctl set +10%
+	
+XF86MonBrightnessDown
+	brightnessctl set 10%-
+	
+### Audio Control & Utilities ###
+
+# Increase Volume
+ctrl + F3
+	amixer set Master 5%+
+
+# Decrease Volume
+ctrl + F2
+	amixer set Master 5%-
+
+# Mute and Unmnute
+ctrl + F4
+	amixer set Master toggle
+	
+# pavucontrol
+super + v
+	pavucontrol
+	
+### Restarting SXHKD and DWM ###
+# restart sxhkd 
+ctrl + shift + r
+	pkill -USR1 -x sxhkd
+	
+# Quit DWM with dm-logout	
+super + shift + q
+	dm-logout
+
+
+### dmscripts (SUPER + p followed by another key) ###
+super + p; h
+    dm-hub
+#super + p; {a}
+    dm-sounds
+super + p; {b}
+    ~/ro-scripts/wallpaper.sh
+#super + p; {c}
+    dtos-colorscheme
+super + p; {shift + c}
+    dm-colpick
+super + p; {e}
+    dm-confedit
+#super + p; {i}
+    dm-maim
+super + p; {k}
+    dm-kill
+super + p; {m}
+    dm-man
+#super + p; {n}
+    dm-note
+super + p; {o}
+    dm-bookman
+#super + p; p
+    passmenu -p Pass:
+super + p; {q}
+    dm-logout
+#super + p; {r}
+    dm-radio
+super + p; {s}
+    dm-websearch
+super + p; {t}
+    dm-translate
