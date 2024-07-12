@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
+/* Path to the file which is used to store tags to all Windows/Clients */
 #define SESSION_FILE "/tmp/dwm-session"
 
 /* appearance */
@@ -53,6 +54,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Qalculate-gtk",     NULL,       NULL,       0,            1,           -1 },
+	{ "Yad",     NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -128,6 +131,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_7,                      6)
+	TAGKEYS(                        XK_8,                      7)
+	TAGKEYS(                        XK_9,                      8)
 	
 	/* Restart dwm */
 	{ MODKEY|ShiftMask, 			XK_r,      quit,           {1} }, 
