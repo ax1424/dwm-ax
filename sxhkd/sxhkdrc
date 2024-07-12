@@ -10,7 +10,7 @@ super + g
     
 # launch the dwm config
 super + c
-    geany + ~/.config/dwm/config.def.h
+    geany + ~/.suckless/dwm-ax/config.def.h
 
 ### Utilities ###
 # pcmanfm
