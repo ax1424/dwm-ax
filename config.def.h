@@ -16,8 +16,8 @@ static const int vertpadbar         = 7;        /* vertical padding for statusba
  */
 static const char *fonts[]     = {"Ubuntu:weight=bold:size=12:antialias=true:hinting=true",
                                   "Hack:size=12:antialias=true:autohint=true",
-                                  "JoyPixels:size=10:antialias=true:autohint=true"};
-                                  
+                                  "JoyPixels:size=10:antialias=true:autohint=true"
+                                  };                                  
 static const char col_1[]  = "#282c34"; /* background color of bar */
 static const char col_2[]  = "#282c34"; /* border color unfocused windows */
 static const char col_3[]  = "#d7d7d7";
@@ -61,11 +61,14 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
+#include "grid.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "HHH",      grid },
+	{ NULL,       NULL },
 };
 
 /* key definitions */
@@ -103,6 +106,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,				XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
