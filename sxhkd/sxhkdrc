@@ -30,13 +30,13 @@ super + shift + v
 	virt-manager
 	
 # Show trayer
-super + shift + t
-    trayer --edge top --align center --widthtype request --expand true --SetDockType true 
+super + semicolon
+     trayer --edge top --align center --widthtype request --expand true --SetDockType true 
     --SetPartialStrut true --transparent true --alpha 0 --tint 0x000000 --height 22 &
 
-# Hide trayer
-super + alt + t
-    pkill trayer
+# Kill trayer
+super + shift + semicolon
+    killall trayer
 	
 ### Brightness Control ###
 XF86MonBrightnessUp	
