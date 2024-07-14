@@ -61,7 +61,7 @@ ctrl + F4
 	
 # pavucontrol
 super + v
-	pavucontrol
+	alacritty -e alsamixer
 	
 ### Restarting SXHKD and DWM ###
 # restart sxhkd 
