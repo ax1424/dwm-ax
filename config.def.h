@@ -16,7 +16,7 @@ static const int vertpadbar         = 7;        /* vertical padding for statusba
  * JoyPixels (ttf-joypixels) is a dependency for colored fonts and emojis.
  */
 static const char *fonts[]     = {"Ubuntu:weight=bold:size=12:antialias=true:hinting=true",
-                                  "Hack:size=12:antialias=true:autohint=true",
+                                  "Hack:size=10:antialias=true:autohint=true",
                                   "JoyPixels:size=10:antialias=true:autohint=true"
                                   };                                  
 static const char col_1[]  = "#282c34"; /* background color of bar */
@@ -110,8 +110,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,						XK_Tab,    cyclelayout,    {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Tab,	   cyclelayout,    {.i = -1 } },
+	{ MODKEY,						XK_Tab,    cyclelayout,    {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,	   cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
