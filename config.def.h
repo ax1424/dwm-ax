@@ -1,3 +1,9 @@
+/*     _    __  __ */
+/*    / \   \ \/ / */
+/*   / _ \   \  /   Aston Xavier (ax1424) */
+/*  / ___ \  /  \  https://github.com/ax1424/dwm-ax */
+/* /_/   \_\/_/\_\ */
+
 /* See LICENSE file for copyright and license details. */
 
 /* Path to the file which is used to store tags to all Windows/Clients */
